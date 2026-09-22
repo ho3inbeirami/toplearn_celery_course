@@ -1,0 +1,10 @@
+services:
+  eshop:
+    build:
+      context: ./eshop
+      dockerfile: dockerfile
+    container_name: eshop_container
+
+    command: python3 manage.py  runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
