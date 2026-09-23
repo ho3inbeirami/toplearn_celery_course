@@ -4,15 +4,14 @@ services:
     container_name: redis
 
   celery:
-    container_name: celery_container
     build:
       context: ./eshop
       dockerfile: dockerfile
-    volumes:
-      - ./eshop:/app
-    command: celery -A config.celery_base worker -l INFO
+    container_name: celery_container
+    command: celery -A config.celery_base  worker -l INFO
     depends_on:
       - redis
+
   eshop:
     build:
       context: ./eshop
