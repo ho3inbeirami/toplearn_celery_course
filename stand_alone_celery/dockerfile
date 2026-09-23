@@ -1,0 +1,12 @@
+FROM python:3.10.21-alpine3.24
+
+WORKDIR /app
+
+COPY . .
+
+ENV PYTHONDONTWRITEBYTECODE=1
+
+ENV PYTHONUNBUFFERED=1
+
+
+RUN pip install -r req.txt

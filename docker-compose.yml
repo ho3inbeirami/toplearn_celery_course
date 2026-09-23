@@ -24,3 +24,12 @@ services:
     depends_on:
       - redis
       - celery
+  stand_alone_celery:
+    build:
+      context: ./stand_alone_celery
+      dockerfile: dockerfile
+    container_name: stand_alone_celery_container
+
+    command: celery -A celery_base worker -l INFO
+    depends_on:
+      - redis
