@@ -1,6 +1,6 @@
 ./env
 /env
 ./eshop/env
-
 eshop/env/
+eshop/config/__pycache_
 eshop/config/__pycache__/
