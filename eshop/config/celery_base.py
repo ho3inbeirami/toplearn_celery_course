@@ -7,9 +7,10 @@ app = Celery('config')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
+app.conf.task_routs = {
+    'notifications.tasks.send_sms':{'queue':'queue1'},
+    'notifications.tasks.send_email':{'queue':'queue2'}
+}
+
 
 app.autodiscover_tasks()
-
-app.task()
-def my_task():
-    pass
