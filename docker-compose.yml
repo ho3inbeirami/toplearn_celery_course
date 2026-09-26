@@ -9,7 +9,7 @@ services:
       dockerfile: dockerfile
     container_name: celery_container
     # command: celery -A config.celery_base  worker -l INFO -Q queue1  
-    command: celery -A config.celery_base  worker -l INFO -Q celery,celery:1,celery:2,celery:3
+    command: celery -A config.celery_base  worker -l INFO -Q celery #,celery:1,celery:2,celery:3
     depends_on:
       - redis
     volumes:
