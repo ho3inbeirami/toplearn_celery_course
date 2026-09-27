@@ -1,24 +1,22 @@
 * s1: django celery
 * s2: celery theory
-* s3: \n
-* s4: \n
-* s5: \n
-* s6: \n
-* s7: \n
-* s8: \n
-* s9: \n
-* s10: \n
-* s11: \n
-* s12: \n
-* s13: \n
-* s14: \n
-* s15: \n
-* s16: \n
-* s17: \n
-* s18: \n
-* s19: \n
-* s20: \n
-* s21: \n
+* s3: install django and celery and redis
+* s4,5:install docker
+* s6: containerize docker for project
+* s7: redis container
+* s8: celery container
+* s9: sudo docker exec -it container /bin/sh
+* s10: config celery
+* s11: change structure
+* s12: stand alone celery
+* s13: Tasks routing in celery
+* s14: taks priority
+* s15: test priority
+* s16: tasks group
+* s17: task chain
+* s18: rate limit in celery
+* s19,20: rabbit MQ config
+* s21: send parameter to tasks
 * s22: \n
 * s23: \n
 * s24: \n
