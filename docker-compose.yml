@@ -32,6 +32,7 @@ services:
       - redis
       - celery
       - rabbitmq
+      - flower
   # stand_alone_celery:
   #   build:
   #     context: ./stand_alone_celery
@@ -50,3 +51,13 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+
+  flower:
+    image: mher/flower:latest
+    container_name: flower
+    ports:
+      - "5555:5555"
+    environment:
+      - CELERY_BROKER_URL= amqp://guest:guest@rabbitmq:5672
+    depends_on:
+      - rabbitmq
