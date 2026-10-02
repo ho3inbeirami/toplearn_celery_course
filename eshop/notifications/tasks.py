@@ -35,39 +35,45 @@ logger = logging.getLogger(__name__)
 
 from celery import group , chain
 
-@shared_task()
-def task_1():
+# @shared_task()
+# def task_1():
     
-    sleep(3)
+#     sleep(3)
 
-    return 0
-
-
-
-@shared_task()
-def task_2(i):
-
-    sleep(3)
-
-    return i 
+#     return 0
 
 
 
-@shared_task()
-def task_3(i):
+# @shared_task()
+# def task_2(i):
 
-    sleep(3)
+#     sleep(3)
 
-    return i
+#     return i 
 
 
-@shared_task()
-def task_4(i):
 
-    sleep(3)
+# @shared_task()
+# def task_3(i):
 
-    return i
+#     sleep(3)
+
+#     return i
+
+
+# @shared_task()
+# def task_4(i):
+
+#     sleep(3)
+
+#     return i
 
 
 # task_group = group(task_1.s(),task_2.s(), task_3.s(),task_4.s())
 # task_chain = chain(task_1.s(),task_2.s(), task_3.s(),task_4.s())
+
+
+@shared_task(queue = 'tasks')
+def task_1():
+    sleep(3)
+    return 

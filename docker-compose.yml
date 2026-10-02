@@ -9,9 +9,10 @@ services:
       dockerfile: dockerfile
     container_name: celery_container
     # command: celery -A config.celery_base  worker -l INFO -Q queue1  
-    command: celery -A config.celery_base  worker -l INFO -Q celery #,celery:1,celery:2,celery:3
+    command: celery -A config.celery_base  worker -l INFO -Q tasks #,celery:1,celery:2,celery:3
     depends_on:
       - redis
+      - rabbitmq
     volumes:
       - ./eshop/:/app
 
@@ -30,6 +31,7 @@ services:
     depends_on:
       - redis
       - celery
+      - rabbitmq
   # stand_alone_celery:
   #   build:
   #     context: ./stand_alone_celery
@@ -40,3 +42,11 @@ services:
   #   command: celery -A celery_base worker -l INFO -Q queue2
   #   depends_on:
   #     - redis
+
+  rabbitmq:
+    image: rabbitmq:4.3-management
+    container_name: rabbitmq_container
+
+    ports:
+      - "5672:5672"
+      - "15672:15672"
