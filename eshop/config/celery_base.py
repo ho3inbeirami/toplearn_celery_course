@@ -23,6 +23,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # }
 
 
+
+# rabbitmq config start
+
 from kombu import Exchange, Queue
 
 app.conf.task_queues = [
@@ -37,6 +40,6 @@ app.conf.worker_prefetch_multiplayer = 1
 app.conf.worker_concurrency = 1
 app.conf.task_acks_late = True
 
-
+# rabbitmq config end
 
 app.autodiscover_tasks()
