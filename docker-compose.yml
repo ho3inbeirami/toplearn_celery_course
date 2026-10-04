@@ -45,7 +45,7 @@ services:
   #     - redis
 
   rabbitmq:
-    image: rabbitmq:4.3-management
+    image: rabbitmq:3.13-management
     container_name: rabbitmq_container
 
     ports:

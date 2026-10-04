@@ -42,4 +42,26 @@ app.conf.task_acks_late = True
 
 # rabbitmq config end
 
+
+# import os 
+
+# base_dir = os.getcwd()
+
+# tasks_folder  = os.path.join(base_dir, 'notifications', 'app_tasks')
+
+# if os.path.exists(tasks_folder) and os.path.isdir(base_dir):
+#     tasks_module = []
+#     for file_name in os.listdir(tasks_folder):
+#         module_name = f'notifications.app_tasks.{file_name}'
+        
+#         module = __import__(module_name, fromlist=["*"])
+#         for name in dir(module):
+#             obj = getattr(module_name,name)
+#             if callable(obj):
+#                 tasks_module.append(f'{module_name}.{name}')
+        
+        
+
+
+
 app.autodiscover_tasks()
