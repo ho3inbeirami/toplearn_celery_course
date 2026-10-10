@@ -73,7 +73,23 @@ from celery import group , chain
 # task_chain = chain(task_1.s(),task_2.s(), task_3.s(),task_4.s())
 
 
+# @shared_task(queue = 'tasks')
+# def task_1():
+#     sleep(3)
+#     return 
+
+
+# error handling 
+
+
+import logging
+
 @shared_task(queue = 'tasks')
-def task_1():
-    sleep(3)
-    return 
+def my_tasks():
+    try:
+        print('this is my task')
+        raise ValueError('this is value error')
+    
+    except Exception as e:
+        logging.error('an exception has been occurred')
+        raise ConnectionError('connection error occurred')

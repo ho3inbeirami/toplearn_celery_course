@@ -1,5 +1,5 @@
 import os
-from celery import Celery
+from celery import Celery ,Task
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
@@ -27,6 +27,9 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # rabbitmq config start
 
 from kombu import Exchange, Queue
+
+
+
 
 app.conf.task_queues = [
     Queue('tasks', Exchange('tasks'), routing_key='tasks',
@@ -65,3 +68,6 @@ app.conf.task_acks_late = True
 
 
 app.autodiscover_tasks()
+
+
+ 
