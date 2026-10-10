@@ -21,7 +21,7 @@
 * s23: flower
 * s24: define new method for find tasks
 * s25: Error handling: loging
-* s26: Error handling:
+* s26: Error handling: create tasks foler
 * s27: Error handling:
 * s28: Error handling:
 * s29: Error handling:
