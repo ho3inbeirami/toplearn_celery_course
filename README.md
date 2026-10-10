@@ -17,17 +17,17 @@
 * s18: rate limit in celery
 * s19,20: rabbit MQ config
 * s21: send parameter to tasks
-* s22: \n
-* s23: \n
-* s24: \n
-* s25: \n
-* s26: \n
-* s27: \n
-* s28: \n
-* s29: \n
-* s30: \n
-* s31: \n
-* s32: \n
+* s22: async or sync
+* s23: flower
+* s24: define new method for find tasks
+* s25: Error handling: loging
+* s26: Error handling:
+* s27: Error handling:
+* s28: Error handling:
+* s29: Error handling:
+* s30: Error handling:
+* s31: Error handling:
+* s32: Error handling:
 * s33: \n
 * s34: \n
 * s35: \n
