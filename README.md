@@ -22,7 +22,7 @@
 * s24: define new method for find tasks
 * s25: Error handling: loging
 * s26: Error handling: create tasks folder
-* s27: Error handling:
+* s27: Error handling: Custom Task basics
 * s28: Error handling:
 * s29: Error handling:
 * s30: Error handling:
