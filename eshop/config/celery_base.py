@@ -67,7 +67,22 @@ app.conf.task_acks_late = True
 
 
 
+###  error handling using custom tasks 
+
+import logging
+
+class CustomTask(Task):
+    def on_failure(self, exc, task_id, args, kwargs, einfo):
+        
+        if isinstance(exc, ConnectionError):
+            logging.error("connection error occurred")
+        
+        else:
+            print(f'task id : {task_id}')
+        return super().on_failure(exc, task_id, args, kwargs, einfo)
+
+
+app.Task = CustomTask
+
 app.autodiscover_tasks()
 
-
- 
