@@ -1,3 +1,4 @@
+* Table of Contents:
 * s1: django celery
 * s2: celery theory
 * s3: install django and celery and redis
@@ -10,7 +11,7 @@
 * s11: change structure
 * s12: stand alone celery
 * s13: Tasks routing in celery
-* s14: taks priority
+* s14: Tasks priority
 * s15: test priority
 * s16: tasks group
 * s17: task chain
@@ -20,11 +21,11 @@
 * s22: async or sync
 * s23: flower
 * s24: define new method for find tasks
-* s25: Error handling: loging
+* s25: Error handling: logging
 * s26: Error handling: create tasks folder
 * s27: Error handling: Custom Task basics
-* s28: Error handling:
-* s29: Error handling:
+* s28: Error handling: Retry
+* s29: Error handling: Tasks Group
 * s30: Error handling:
 * s31: Error handling:
 * s32: Error handling:
