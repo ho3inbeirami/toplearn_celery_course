@@ -26,7 +26,7 @@
 * s27: Error handling: Custom Task basics
 * s28: Error handling: Retry
 * s29: Error handling: Tasks Group
-* s30: Error handling:
+* s30: Error handling: Tasks Chain
 * s31: Error handling:
 * s32: Error handling:
 * s33: \n
