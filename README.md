@@ -30,7 +30,7 @@
 * s31: Error handling: Dead Letter Queue 1
 * s32: Error handling: Dead Letter Queue 2
 * s33: Error handling: Time Limit
-* s34: Error handling:
+* s34: Error handling: Timeout
 * s35: Error handling:
 * s36: Error handling:
 * s37: 
