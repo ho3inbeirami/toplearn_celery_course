@@ -27,8 +27,8 @@
 * s28: Error handling: Retry
 * s29: Error handling: Tasks Group
 * s30: Error handling: Tasks Chain
-* s31: Error handling:  
-* s32: Error handling:
+* s31: Error handling: Dead Letter Queue 1
+* s32: Error handling: Dead Letter Queue 2
 * s33: Error handling:
 * s34: Error handling:
 * s35: Error handling:
