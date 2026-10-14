@@ -73,6 +73,8 @@ app.conf.task_acks_late = True
 import logging
 
 class CustomTask(Task):
+
+
     def on_failure(self, exc, task_id, args, kwargs, einfo):
         
         if isinstance(exc, ConnectionError):
@@ -83,7 +85,7 @@ class CustomTask(Task):
         return super().on_failure(exc, task_id, args, kwargs, einfo)
 
 
-app.Task = CustomTask
+#app.Task = CustomTask
 
 app.autodiscover_tasks()
 
