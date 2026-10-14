@@ -16,23 +16,30 @@ phone_numbers = [
     
 ]
 
-@shared_task(queue = "tasks") #,  autoretry_for = (ConnectionError,), default_retry_delay = 5, retry_kwargs = {'max_retries':5})
+@shared_task(queue = "tasks") 
 def send_sms_to_user(phone_number  :str):
     if phone_number.startswith('0903'):
         raise ValueError('invalid phone number !!! ')
-
+    
     return f'message has been sent to {phone_number}'
 
 
 
 
+@shared_task(queue = 'dead_letter')
+def handel_error_in_dead_letter(*args, **kwargs):
+    print('error handel in dead letter')
+    
 
 
 def handle_tasks(result ):
     if result.successful():
         print(f'task completed : {result.get()}')
-    elif result.failed() and isinstance(result.result):
-        print(f'task completed : {result.result}')
+    elif result.failed() and isinstance(result.result , ValueError):
+        print(f'task failed : {result.result}')
+        print('process was sent to error handling Queue')
+        handel_error_in_dead_letter.apply_async(args = ('this is data','this is another data'))
+        
 
     elif result.status == 'REVOKED':
         print(f'task was revoked: {result.id}')
@@ -40,7 +47,7 @@ def handle_tasks(result ):
         
         
 def run_tasks():
-    task_group = group([ send_sms_to_user.s(phone_number) for phone_number in phone_numbers ])
+    task_group = group( send_sms_to_user.s(phone_number) for phone_number in phone_numbers)
     
     result_group = task_group.apply_async()
     

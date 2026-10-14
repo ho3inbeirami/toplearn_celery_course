@@ -33,7 +33,8 @@ from kombu import Exchange, Queue
 
 app.conf.task_queues = [
     Queue('tasks', Exchange('tasks'), routing_key='tasks',
-          queue_arguments={'x-max-priority': 10}),
+        queue_arguments={'x-max-priority': 10}),
+    Queue('dead_letter', routing_key='dead_letter')
 ]
 
 app.conf.task_max_priority = 10

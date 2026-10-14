@@ -27,14 +27,14 @@
 * s28: Error handling: Retry
 * s29: Error handling: Tasks Group
 * s30: Error handling: Tasks Chain
-* s31: Error handling:
+* s31: Error handling:  
 * s32: Error handling:
-* s33: \n
-* s34: \n
-* s35: \n
-* s36: \n
-* s37: \n
-* s38: \n
+* s33: Error handling:
+* s34: Error handling:
+* s35: Error handling:
+* s36: Error handling:
+* s37: 
+* s38: 
 * s39: \n
 * s40: \n
 * s41: \n
