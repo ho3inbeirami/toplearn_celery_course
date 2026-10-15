@@ -3,3 +3,5 @@ from .sms import *
 from .websocket import *
 
 from .my_math import *
+
+from .new_tasks import * 
