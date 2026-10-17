@@ -32,7 +32,7 @@
 * s33: Error handling: Time Limit
 * s34: Error handling: Timeout
 * s35: Error handling: Link and Link_error
-* s36: Error handling: signals
+* s36: Signals
 * s37: Schedule Task in celery 
 * s38: 
 * s39: \n
