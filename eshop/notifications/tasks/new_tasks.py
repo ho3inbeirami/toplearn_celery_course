@@ -14,7 +14,7 @@ def process_result(result):
 
 
 
-@app.task(queue = 'tasks')
+@app.task(queue = 'tasks') 
 def process_error_result(task_id,exc, traceback):
     sys.stdout.write('----------------------------')
     sys.stdout.write(str(exc))
