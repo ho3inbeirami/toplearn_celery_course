@@ -85,7 +85,7 @@ class CustomTask(Task):
         return super().on_failure(exc, task_id, args, kwargs, einfo)
 
 
-#app.Task = CustomTask
+app.Task = CustomTask
 
 app.autodiscover_tasks()
 

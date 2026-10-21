@@ -5,3 +5,7 @@ eshop/env/
 eshop/config/__pycache_
 eshop/config/__pycache__/
 eshop/celerybeat-schedule
+.python-version
+pyproject.toml
+src/
+uv.lock

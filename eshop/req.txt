@@ -1,5 +1,0 @@
-celery
-Django
-redis
-pika
-django-celery-beat
