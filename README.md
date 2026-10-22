@@ -37,5 +37,5 @@
 * s38: Celery Beat
 * s39: Corn tab in celery beat
 * s40: django-celery-beat package
-* s41: \n
-* s42: \n
+* s41: change apply_async actions
+* s42: Singleton Execution

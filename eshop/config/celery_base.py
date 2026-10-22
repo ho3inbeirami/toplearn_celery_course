@@ -90,6 +90,10 @@ class CustomTask(Task):
         else:
             return self(*args, **kwargs)
 
+from celery_singleton import Singleton
+class SingleTonCustomTask(Task,Singleton):
+    pass
+
 
 app.Task = CustomTask
 
