@@ -34,8 +34,8 @@
 * s35: Error handling: Link and Link_error
 * s36: Signals
 * s37: Schedule Task in celery 
-* s38: 
-* s39: \n
-* s40: \n
+* s38: Celery Beat
+* s39: Corn tab in celery beat
+* s40: django-celery-beat package
 * s41: \n
 * s42: \n

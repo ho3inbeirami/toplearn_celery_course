@@ -9,3 +9,6 @@ eshop/celerybeat-schedule
 pyproject.toml
 src/
 uv.lock
+
+eshop/notifications/__pycache__/
+eshop/notifications/tasks/__pycache__/

@@ -71,10 +71,10 @@ app.conf.task_acks_late = True
 ###  error handling using custom tasks 
 
 import logging
+from django.conf import settings
 
 class CustomTask(Task):
-
-
+    
     def on_failure(self, exc, task_id, args, kwargs, einfo):
         
         if isinstance(exc, ConnectionError):
@@ -83,6 +83,12 @@ class CustomTask(Task):
         else:
             print(f'task id : {task_id}')
         return super().on_failure(exc, task_id, args, kwargs, einfo)
+    
+    def apply_async(self, *args: tuple, **kwargs: dict):
+        if settings.RUN_TASK_IN_CELERY:
+            return super().apply_async(*args, **kwargs)
+        else:
+            return self(*args, **kwargs)
 
 
 app.Task = CustomTask
